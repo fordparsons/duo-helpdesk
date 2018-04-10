@@ -1,14 +1,13 @@
 <!doctype html>
-    <title>BVLABs</title>
+    <title>Duo Identification Check</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
           <div class="page">
-              <h1>Welcome to BVLABs</h1>
-              <div class="metanav">
+              <h1 align="center">Duo Identification Check</h1>
                   {% if not session.logged_in %}
-                    <a href="{{ url_for('login') }}" class="button1">Log In</a>
+                    <a href="{{ url_for('login') }}" class="button1" style="display:block;margin-left:auto;margin-right:auto">Validate User</a>
                   {% else  %}
-                    <a href="{{ url_for('logout') }}" class="button2">Log Out</a>
+                    <a href="{{ url_for('logout') }}" class="button2" style="display:block;margin-left:auto;margin-right:auto">Reset</a>
+                  </br>
                   {% endif %}
-              </div>
               {% block body %}{% endblock %}
           </div>
