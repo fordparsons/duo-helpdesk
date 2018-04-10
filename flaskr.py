@@ -13,7 +13,7 @@ app.config.from_object(__name__)
 
 
 # config parser
-def grab_keys(filename='appkey/duo.conf'):
+def grab_keys(filename='duo.conf'):
     config = ConfigParser.RawConfigParser()
     config.read(filename)
 
