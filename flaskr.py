@@ -78,5 +78,4 @@ def logout():
 # main body
 if __name__ == '__main__':
     app.secret_key = app_config('app.conf')
-    app.run()
-# app.run(host="192.168.81.115", port=5000)
+    app.run(host="0.0.0.0", port=5000)
