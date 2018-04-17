@@ -1,30 +1,24 @@
-#Flaskr + DUO = 2FA your login
+#Duo User Verification with Flask
+
+## For use with fordswake/dhd14 docker image
+PLACE LINK TO DOCKER HUB HERE
 
 ## How to use
-1. Setup a Duo [WebDSK](https://duo.com/docs/duoweb) application
-2. Generate akey: "python generate_akey"
-3. Edit duo.conf file include ikey, skey, akey (generated in previous step) and API
-4. Open up a command line and run ``` python flaskr.py ```
-5. Navigate your browser to ```http://127.0.0.1:5000/```
-6. Click 'Login'
-
-##Modify Web
-Edit the HTML files as necessary in the templates folder
-
-##Configuration files:
-
-This application relies on two configuration files that follow the standard .ini format. These variables are all read through `ConfigParser()` into a dictionary.
-
-###app.conf
+Setup a Duo [WebDSK](https://duo.com/docs/duoweb) application
+Install docker
+Create the docker container (this example names it "helpdesk"):
 ```
-; My App configuration
-
-[app]
-skey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+docker run -d -p 5000:5000 --name helpdesk fordswake/dhd14
 ```
-The `skey` is the client-side session cookie for remembering you are logged in. it can be any alpha-numeric string.
+Edit duo.conf file to include ikey, skey, akey (string of 40 random characters) and API
+Import your duo.conf file to the running container:
+```
+docker cp duo.conf <yourcontainername>:Duo_WebSDK_Demo/duo.conf
+Navigate your browser to ```http://localhost:5000/```
+Click the Green Button
 
-###duo.conf
+##duo.conf format
+
 ```
 ; Duo integration config
 
