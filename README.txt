@@ -5,7 +5,7 @@ PLACE LINK TO DOCKER HUB HERE
 
 ## How to use
 Setup a Duo [WebDSK](https://duo.com/docs/duoweb) application
-Install docker
+Install docker on host system
 Create the docker container (this example names it "helpdesk"):
 ```
 docker run -d -p 5000:5000 --name helpdesk fordswake/dhd14
@@ -15,7 +15,7 @@ Import your duo.conf file to the running container:
 ```
 docker cp duo.conf <yourcontainername>:Duo_WebSDK_Demo/duo.conf
 Navigate your browser to ```http://localhost:5000/```
-Click the Green Button
+Click the Green Button and enter username to verify!
 
 ##duo.conf format
 
