@@ -1,7 +1,7 @@
 #Duo User Verification with Flask
 
 ## For use with fordswake/dhd14 docker image
-PLACE LINK TO DOCKER HUB HERE
+https://hub.docker.com/r/fordswake/dhd14/
 
 ## How to use
 Setup a Duo [WebDSK](https://duo.com/docs/duoweb) application
