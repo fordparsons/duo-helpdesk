@@ -13,7 +13,7 @@ docker run -d -p 5000:5000 --name <yourcontainername> fordparsons/duo-helpdesk
 Edit duo.conf file to include ikey, skey, akey (string of 40 random characters) and API
 Import your duo.conf file to the running container:
 ```
-docker cp duo.conf <yourcontainername>:Duo_WebSDK_Demo/duo.conf
+docker cp duo.conf <yourcontainername>:duo-helpdesk/duo.conf
 Navigate your browser to ```http://localhost:5000/```
 Click the Green Button and enter username to verify!
 
