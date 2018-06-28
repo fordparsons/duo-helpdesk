@@ -1,14 +1,14 @@
 #Duo User Verification with Flask
 
-## For use with fordswake/dhd14 docker image
-https://hub.docker.com/r/fordswake/dhd14/
+## For use with fordparsons/duo-helpdesk docker image
+https://hub.docker.com/r/fordparsons/duo-helpdesk/
 
 ## How to use
 Setup a Duo [WebDSK](https://duo.com/docs/duoweb) application
 Install docker on host system
 Create the docker container (this example names it "helpdesk"):
 ```
-docker run -d -p 5000:5000 --name helpdesk fordswake/dhd14
+docker run -d -p 5000:5000 --name <yourcontainername> fordparsons/duo-helpdesk
 ```
 Edit duo.conf file to include ikey, skey, akey (string of 40 random characters) and API
 Import your duo.conf file to the running container:
