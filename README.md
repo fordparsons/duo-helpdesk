@@ -14,9 +14,10 @@ Edit duo.conf file to include ikey, skey, akey (string of 40 random characters) 
 Import your duo.conf file to the running container:
 ```
 docker cp duo.conf <yourcontainername>:duo-helpdesk/duo.conf
-Navigate your browser to ```http://localhost:5000/```
-Click the Green Button and enter username to verify!
 ```
+Navigate your browser to `http://localhost:5000/`
+Click the Green Button and enter username to verify!
+
 
 ## duo.conf format
 ```
