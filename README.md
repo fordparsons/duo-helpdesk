@@ -1,4 +1,4 @@
-#Duo User Verification with Flask
+# Duo User Verification with Flask
 
 ## For use with fordparsons/duo-helpdesk docker image
 https://hub.docker.com/r/fordparsons/duo-helpdesk/
